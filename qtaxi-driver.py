@@ -25,6 +25,7 @@ q_table = np.zeros([env.observation_space.n, env.action_space.n])
 print("Action Space {}".format(env.action_space))
 print("State Space {}".format(env.observation_space))
 
+#just for test
 state = env.encode(3, 1, 2, 0) # (taxi row, taxi column, passenger index, destination index)
 print("State:", state)
 
