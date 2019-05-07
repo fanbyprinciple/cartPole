@@ -103,13 +103,13 @@ print("Training completed.")
 #         penalties += 1
     
 #     # Put each rendered frame into dict for animation
-#     frames.append({
-#         'frame': env.render(mode='ansi'),
-#         'state': state,
-#         'action': action,
-#         'reward': reward
-#         }
-#     )
+    # frames.append({
+    #     'frame': env.render(mode='ansi'),
+    #     'state': state,
+    #     'action': action,
+    #     'reward': reward
+    #     }
+    # )
 
 #     epochs += 1
 
@@ -139,9 +139,18 @@ for _ in range(episodes):
         if reward == -10:
             penalties += 1
 
+        frames.append({
+            'frame': env.render(mode='ansi'),
+            'state': state,
+            'action': action,
+            'reward': reward
+            })
+
     epoch += 1
     total_penalties += penalties
     total_epochs += epochs
+
+print_frames(frames)
 
 print(f"Results after {episodes} episodes:")
 print(f"Average timesteps per episode: {total_epochs / episodes}")
