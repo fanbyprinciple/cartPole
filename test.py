@@ -1,3 +1,5 @@
+# just to test if atari-py is working
+
 import gym
 env = gym.make('SpaceInvaders-v0')
 env.reset()
