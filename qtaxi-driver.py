@@ -139,7 +139,8 @@ for _ in range(episodes):
         if reward == -10:
             penalties += 1
 
-        frames.append({
+    
+    frames.append({
             'frame': env.render(mode='ansi'),
             'state': state,
             'action': action,
