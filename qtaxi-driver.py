@@ -1,4 +1,3 @@
-
 """Training the agent"""
 
 import gym
@@ -8,6 +7,11 @@ colorama.init()
 
 from IPython.display import clear_output
 from time import sleep
+
+import numpy as np 
+q_table = np.zeros([env.observation_space.n, env.action_space.n])
+# initializing a 500 * 6 matrix of zeroes
+
 
 
 env = gym.make("Taxi-v2").env
